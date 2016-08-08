@@ -1,0 +1,106 @@
+Git Important mostly used command 
+	1. go to project folder(such as: D/vikram_code).
+		(a) git status   {" Display updated file list compare to reposetry."}
+		(b) git pull origin master {"Update local repositry by online updation with keep your changes."}
+		(c) git add <FILE PATH> {" ADD singl file for commit "} 
+			Example  git add index.php
+		(d) git add -A {" ADD all upadted file"}
+		(e) git commit -m "COMMENT SPECIFIC UNIQUE COMMENT"
+		(f) Git push origin master {"Upload chnages to live repositry"}
+	
+GIT COMMAND LIST.
+	View commit history.
+		(a). git log {"Display list commit last"} 
+		(b). Git log -p -< Limit to display commit >  {" Display commit "}
+		(c). Git log --stat {"commit List with abbrivation"}
+		(d). Git log --pretty {" commit list with pretty format"} 
+		(e). Git log --preety=oneline
+		(e). Git log --preety=full
+		(e). Git log --preety=short
+		(e). Git log --preety=fuller
+		(F). git log --pretty=format:"%h - %an, %ar : %s"   {" commit list with detail option"}
+	
+	Remove last commmit by used
+		(A). git reset --soft HEAD^
+		
+		(B). git push -f origin <branch name>
+	
+	Remove commit
+		(a). git reset --hard <id>
+	
+	Change Most recent commit comment
+		(a). git commit --amend
+			git push -f origin <branch name>
+			link : https://help.github.com/articles/changing-a-commit-message/
+			
+	Update brach by origin master index
+		(a). Git checkout <Brach Name>
+		()
+
+		
+	Create ssh Key 
+		$ git config --global user.name "Billy Everyteen"
+		$ git config --global user.email "Billy@Everyteen"
+		ls ~/.ssh   {Check existing ssh key} 
+			path 
+		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+		Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+		Enter passphrase (empty for no passphrase): [Type a passphrase]
+		Enter same passphrase again: [Type passphrase again]
+		
+		
+	Clean And remove untrack file	
+		$ git clean -f
+		$ git clean -f -n {Show delet file}
+		$ git clean -f -d
+		
+	
+		
+			
+*********************************************************************************************
+
+1. git clone https://dcgit.dc-rmp.com/DCRMP/Foundation.git
+
+2.  git status :- check file status(modified, updated)
+
+3.  git branch :- check current branch
+
+4.  git branch "branch_name" :- create new branch
+
+5.  git checkout "branch_name" :- switched branch
+
+6.  git add "file name"  :- particular file add  for commint
+
+7.  git add . :- commit all files
+
+8.  git commit -m "comment"  :-  commit files after add files
+
+9.  git push origin "branch" :- push branch on live
+
+10. git pull origin "branch_name"  :- get other branch code
+
+11. git branch -a :- get all branches list
+
+12. git fetch origin :- fetch all new branches 
+
+13. git checkout -t origin/"BRC_Phase_1" :- switch in new branch
+
+14. git stash save "Comment" 
+
+15. git stash list 
+
+16. git stash apply stash@{0} 
+
+17. git checkout "file path" :-  reset modified file
+
+18. git diff "file name" :- show all file changes 
+
+19. git log --oneline :- show all changes logs
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+REFRENCE 
+	1. https://support.codebasehq.com/
+	2. https://www.atlassian.com/git/tutorials/what-is-git/
+	
