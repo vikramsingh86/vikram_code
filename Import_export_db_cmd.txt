@@ -1,0 +1,48 @@
+Export:
+mysqldump -urel_adopted_new -prel_adopted_new rel_adopted_new profile | gzip > /home/release/public_html/adopted/profile.sql.gz
+Note:- Please have a look to details for each keywords:
+mysqldump:											use as it is
+urel_adopted_new:									database username
+prel_adopted_new:									database password
+rel_adopted_new:									database name
+profile:											table name which you want to export
+gzip:												export formate
+/home/release/public_html/adopted/profile.sql.gz: 	path where we want to save exported sql zip file.
+
+
+
+
+Import: 
+gunzip < /home/release/public_html/adopted/profile.sql.gz | mysql -urel_adopted_new -prel_adopted_new rel_adopted_new
+Note:- Please have a look to details for each keywords:
+gunzip: 											use as it is
+/home/release/public_html/adopted/profile.sql.gz: 	path of sql zip file
+urel_adopted_new:									database username
+prel_adopted_new:									database password
+rel_adopted_new:									database name
+Note: yeh jis name se table export huyi hia usi name se table create kar deti hia.
+
+122.160.205.84 Putty login details:
+Username: release
+Passowrd: ds@909DOt909
+
+
+============================= Export at localhost ============================
+Type below commands in command prompt to export database:
+D:
+cd new _Xamp/xampp/mysql/bin
+mysqldump -h localhost -u root -p rel_adopted_new > rel_adopted_new.sql
+
+/********* For export particular table *********/
+mysqldump -h localhost -u root -p rel_adopted_new members > members.sql
+
+Above command will database 'rel_adopted_new' as rel_adopted_new.sql file at D/new _Xamp/xampp/mysql/bin/ folder.
+
+========================= Import at localhost ==================================
+Type below commands in command prompt to import database:
+1.put .sql file in to E/xampp/mysql/bin/ folder
+2.create database with any name such as 'rel_adopted_new' you want to use
+3.execute below command:
+D:
+cd new _Xamp/xampp/mysql/bin
+mysql -u root -p -h localhost rel_adopted_new < rel_adopted_new.sql
