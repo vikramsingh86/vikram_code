@@ -1,0 +1,12 @@
+Step1: To setup cake3, first we need to have intalled composer in our system. Please refer to document 'Install_composer.txt' to learn how to install composer.
+
+Step2: Please open command prompt and reach at the directory where our xampp is installed. Such as E:
+
+Step3: Now go to the root directory where you want to setup cake3. For example, if you created a directory 'cake_test', please run below command:
+ cd xampp/htdocs/cake_test
+ 
+Step4: After reaching into project directory, please run below command to setup cake3:
+ composer create-project --prefer-dist cakephp/app
+
+Step5: Above command will setup cake. Please cut all directories and files from 'app' and put them at root.
+ 

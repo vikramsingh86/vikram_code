@@ -1,0 +1,16 @@
+Step1: To use cake bake, first we need to set environment variable.
+To set up environment variable, please follow below steps:
+ - Right click on 'My Computer' > 'Properties' > 'Advanced system settings' > 'Advanced' > 'Environment Variables' > double click on 'PATH'.
+ - At the end of 'PATH' string, add relative root path of your project starting with ';'. For ex: ;E:\xampp\htdocs\cake3
+ - Save these settings.
+
+Step2: After setting up environment variable, open command prompt.
+
+Step3: Reach at the root of your cake php project. For example, if your project name is 'cake3' in 'E' directory, please run below command:
+E:
+cd xampp/htdocs/cake3
+cd bin
+cake bake all 
+
+Step4: To create Model/View/Controller for 'admin' please run below command:
+cake bake controller --prefix admin all
